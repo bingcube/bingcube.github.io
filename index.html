@@ -6,88 +6,131 @@
     <title>Sky - Blurskydev</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+            overflow-x: hidden;
+        }
+        body {
+            background: linear-gradient(135deg, rgba(116, 235, 213, 0.5), rgba(172, 182, 229, 0.5));
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            color: #333;
+            position: relative;
         }
-        .container {
-            background-color: #ffffffdd;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            padding: 40px;
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            filter: blur(50px);
+        }
+        .background div {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(-50px) rotate(180deg); }
+            100% { transform: translateY(0) rotate(360deg); }
+        }
+        .background div:nth-child(1) { top: 10%; left: 20%; animation-duration: 7s; }
+        .background div:nth-child(2) { top: 30%; left: 50%; animation-duration: 9s; }
+        .background div:nth-child(3) { top: 70%; left: 80%; animation-duration: 11s; }
+
+        .hero {
             text-align: center;
+            margin: 0 auto;
+            padding: 0 20px;
+            color: #fff;
+            z-index: 1;
         }
-        h1 {
-            font-size: 3em;
-            margin: 0;
+        .hero h1 {
+            font-size: 5em;
+            letter-spacing: 5px;
+            margin-top: 20vh;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 2s forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content {
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            padding: 50px 20px;
+            background-color: #ffffffdd;
+            border-radius: 20px;
+            margin-top: 100vh;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeInContent 2s forwards;
+        }
+        @keyframes fadeInContent {
+            50% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
             color: #2c3e50;
         }
         p {
             font-size: 1.2em;
-            margin: 20px 0;
             line-height: 1.6;
+            color: #34495e;
         }
         a {
-            text-decoration: none;
             color: #3498db;
+            text-decoration: none;
             font-weight: bold;
-        }
-        .macos-bar {
-            width: 100%;
-            background-color: #f4f4f4;
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .macos-buttons {
-            display: flex;
-            gap: 5px;
-        }
-        .macos-button {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-        }
-        .macos-button.close { background-color: #ff5f57; }
-        .macos-button.minimize { background-color: #ffbd2e; }
-        .macos-button.maximize { background-color: #28c940; }
-        .username {
-            font-weight: 400;
-            font-size: 1.5em;
-            color: #333;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="macos-bar">
-            <div class="macos-buttons">
-                <div class="macos-button close"></div>
-                <div class="macos-button minimize"></div>
-                <div class="macos-button maximize"></div>
-            </div>
-            <span>blurskydev.github.io</span>
-        </div>
-        <h1>Hello, I'm Sky!</h1>
+
+    <div class="background">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="hero">
+        <h1>Hi</h1>
+    </div>
+
+    <div class="content">
+        <h2>About Me</h2>
         <p>
-            I'm passionate about technology and coding, and I love the open skies above. My online handle is <strong>@blurskydev</strong>, and I enjoy exploring the endless possibilities in the digital world.
+            I'm Sky, a developer passionate about technology and the endless blue sky above. I go by the handle <strong>@blurskydev</strong> online, where I build and create new projects.
         </p>
         <p>
-            Feel free to connect with me on Discord: <a href="https://discord.com" target="_blank">@blurskydev</a>.
-        </p>
-        <p>
-            Thanks for visiting my GitHub page. Stay tuned for more exciting projects and updates!
+            Feel free to connect with me on Discord: <a href="https://discord.com" target="_blank">@blurskydev</a>. I'm always open to new ideas and collaborations.
         </p>
     </div>
+
 </body>
 </html>
