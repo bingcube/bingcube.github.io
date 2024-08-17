@@ -59,6 +59,7 @@
             font-size: 5rem;
             font-weight: bold;
             animation: textFadeIn 3s ease forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         @keyframes textFadeIn {
@@ -66,17 +67,28 @@
             100% { opacity: 1; transform: scale(1); }
         }
 
+        #hiSection:hover {
+            transform: scale(1.1);
+            box-shadow: 0020pxrgba(255, 255, 255, 0.8);
+        }
+
         /* About Section */#aboutSection {
             top: 100vh;
             text-align: center;
             font-size: 1.8rem;
             opacity: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         #aboutSection.reveal {
             opacity: 1;
             transition: opacity 1s ease, transform 1s ease;
             transform: translateY(-20px);
+        }
+
+        #aboutSection:hover {
+            transform: scale(1.05);
+            box-shadow: 0015pxrgba(255, 255, 255, 0.7);
         }
 
         /* Floating Animations for Decor Elements */.floating {
