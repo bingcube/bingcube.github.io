@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sky's World</title>
-    <style>
-        /* Reset margin and padding */
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Sky's World</title><style>/* Reset margin and padding */
         * {
             margin: 0;
             padding: 0;
@@ -15,94 +8,100 @@
         body, html {
             height: 100%;
             font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            overflow: hidden;
         }
 
-        /* Gradient animated background */
-        body {
-            background: linear-gradient(45deg, #00c6ff, #0072ff, #b3e5fc);
-            background-size: 300% 300%;
-            animation: gradientMove 10s ease infinite;
+        /* Gradient animated background with enhanced effects */body {
+            background: linear-gradient(120deg, #00c6ff, #0072ff, #b3e5fc, #4a00e0, #8e2de2);
+            background-size: 400%400%;
+            animation: gradientMove 15s ease infinite;
             display: flex;
             justify-content: center;
             align-items: center;
             color: white;
-            overflow: hidden;
+            position: relative;
         }
 
-        /* Keyframes for background animation */
         @keyframes gradientMove {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
+            0% { background-position: 0%50%; }
+            50% { background-position: 100%50%; }
+            100% { background-position: 0%50%; }
         }
 
-        /* Section for 'Hi' */
-        .section {
+        /* Stars Effect */@keyframes twinkling {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: transparent url('https://i.imgur.com/3q6QjYc.png') repeat top center;
+            animation: twinkling 10s infinite ease-in-out;
+        }
+
+        /* Hi Section Styles */.section {
             position: absolute;
             width: 100%;
             height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: opacity 0.8s ease;
+            transition: opacity 1.2s ease;
         }
 
         #hiSection {
-            font-size: 4rem;
+            font-size: 5rem;
             font-weight: bold;
+            animation: textFadeIn 3s ease forwards;
         }
 
-        #aboutSection {
-            position: absolute;
+        @keyframes textFadeIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* About Section */#aboutSection {
             top: 100vh;
-            height: 100%;
             text-align: center;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             opacity: 0;
         }
 
-        /* Scroll reveal effect */
-        .reveal {
-            transition: opacity 1s ease;
-        }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Content when scrolling */
         #aboutSection.reveal {
             opacity: 1;
+            transition: opacity 1s ease, transform 1s ease;
+            transform: translateY(-20px);
         }
-    </style>
-</head>
-<body>
-    <!-- 'Hi' Section -->
-    <div id="hiSection" class="section">
+
+        /* Floating Animations for Decor Elements */.floating {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        .floating:nth-child(2) { animation-duration: 8s; left: 10%; top: 30%; }
+        .floating:nth-child(3) { animation-duration: 7s; right: 20%; top: 60%; }
+        .floating:nth-child(4) { animation-duration: 10s; left: 80%; top: 40%; }
+        .floating:nth-child(5) { animation-duration: 12s; right: 10%; bottom: 20%; }
+    </style></head><body><!-- Animated Gradient Background --><div class="stars"></div><!-- Floating Decorative Elements --><div class="floating"></div><div class="floating"></div><div class="floating"></div><div class="floating"></div><!-- 'Hi' Section --><div id="hiSection" class="section">
         Hi, I'm Sky
-    </div>
-
-    <!-- About Section -->
-    <div id="aboutSection" class="section">
-        <p>I'm Sky, a passionate web developer who loves the beauty of the sky.</p>
-        <p>You can reach me on Discord: @blurskydev</p>
-    </div>
-
-    <script>
-        // Detect scroll and reveal the about section
-        window.addEventListener('scroll', function() {
+    </div><!-- About Section --><div id="aboutSection" class="section"><p>I'm Sky, a passionate web developer who loves the beauty of the sky.</p><p>You can reach me on Discord: @blurskydev</p></div><script>// Detect scroll and reveal the about sectionwindow.addEventListener('scroll', function() {
             var aboutSection = document.getElementById('aboutSection');
             if (window.scrollY > window.innerHeight / 3) {
                 aboutSection.classList.add('reveal');
             }
         });
-    </script>
-</body>
-</html>
+    </script></body></html>
