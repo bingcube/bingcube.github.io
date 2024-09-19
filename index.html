@@ -1,121 +1,35 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>hi, im sky</title><style>/* Reset margin and padding */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body, html {
-            height: 100%;
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-            overflow: hidden;
-        }
-
-        /* Gradient animated background with enhanced effects */body {
-            background: linear-gradient(120deg, #00c6ff, #0072ff, #b3e5fc, #4a00e0, #8e2de2);
-            background-size: 400%400%;
-            animation: gradientMove 15s ease infinite;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            position: relative;
-        }
-
-        @keyframes gradientMove {
-            0% { background-position: 0%50%; }
-            50% { background-position: 100%50%; }
-            100% { background-position: 0%50%; }
-        }
-
-        /* Star Effect using CSS */.stars::before, .stars::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="white" opacity="0.8"/></svg>') repeat;
-            animation: twinkling 5s infinite ease-in-out alternate;
-        }
-
-        @keyframes twinkling {
-            from { opacity: 0.8; transform: translateY(0); }
-            to { opacity: 0.2; transform: translateY(-10px); }
-        }
-
-        /* Hi Section Styles */.section {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 1.2s ease;
-        }
-
-        #hiSection {
-            font-size: 5rem;
-            font-weight: bold;
-            animation: textFadeIn 3s ease forwards;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        @keyframes textFadeIn {
-            0% { opacity: 0; transform: scale(0.8); }
-            100% { opacity: 1; transform: scale(1); }
-        }
-
-        #hiSection:hover {
-            transform: scale(1.1);
-            box-shadow: 0020pxrgba(255, 255, 255, 0.8);
-        }
-
-        /* About Section */#aboutSection {
-            top: 100vh;
-            text-align: center;
-            font-size: 1.8rem;
-            opacity: 0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        #aboutSection.reveal {
-            opacity: 1;
-            transition: opacity 1s ease, transform 1s ease;
-            transform: translateY(-20px);
-        }
-
-        #aboutSection:hover {
-            transform: scale(1.05);
-            box-shadow: 0015pxrgba(255, 255, 255, 0.7);
-        }
-
-        /* Floating Animations for Decor Elements */.floating {
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0); }
-        }
-
-        .floating:nth-child(2) { animation-duration: 8s; left: 10%; top: 30%; }
-        .floating:nth-child(3) { animation-duration: 7s; right: 20%; top: 60%; }
-        .floating:nth-child(4) { animation-duration: 10s; left: 80%; top: 40%; }
-        .floating:nth-child(5) { animation-duration: 12s; right: 10%; bottom: 20%; }
-    </style></head><body><!-- Animated Gradient Background --><div class="stars"></div><!-- Floating Decorative Elements --><div class="floating"></div><div class="floating"></div><div class="floating"></div><div class="floating"></div><!-- 'Hi' Section --><div id="hiSection" class="section">
-        Hi, I'm Sky
-    </div><!-- About Section --><div id="aboutSection" class="section"><p>I'm Sky, a passionate web developer who loves the beauty of the sky.</p><p>You can reach me on Discord: @blurskydev</p></div><script>// Detect scroll and reveal the about sectionwindow.addEventListener('scroll', function() {
-            var aboutSection = document.getElementById('aboutSection');
-            if (window.scrollY > window.innerHeight / 3) {
-                aboutSection.classList.add('reveal');
+<html lang="en"><head><style data-emotion="mantine" data-s=""></style><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" as="image" href="https://r2.guns.lol/7e930dd9-81e3-453a-815e-5839be5c6749.png"><link rel="stylesheet" href="/_next/static/css/8358f047b2b67bd7.css" data-precedence="next"><link rel="stylesheet" href="/_next/static/css/5195dfab955c8f60.css" data-precedence="next"><link rel="preload" as="script" fetchpriority="low" href="/_next/static/chunks/webpack-cbd96ddd45265a35.js"><script src="/_next/static/chunks/fd9d1056-31e1c1a3fdd56e55.js" async=""></script><script src="/_next/static/chunks/7023-2b6387fdeee0602c.js" async=""></script><script src="/_next/static/chunks/main-app-c39fedede3a4cfda.js" async=""></script><script src="/_next/static/chunks/231-2e4f92705edd89a9.js" async=""></script><script src="/_next/static/chunks/app/not-found-d2a0863593ea9c67.js" async=""></script><script src="/_next/static/chunks/7963-ab1516be429d5fce.js" async=""></script><script src="/_next/static/chunks/6882-00ed709e5a044872.js" async=""></script><script src="/_next/static/chunks/3810-79d5b5f2b09d1382.js" async=""></script><script src="/_next/static/chunks/1531-aa33b0abb1342068.js" async=""></script><script src="/_next/static/chunks/3371-45cd79df0c3ccbfb.js" async=""></script><script src="/_next/static/chunks/8287-6bb4e1b8ebc57bec.js" async=""></script><script src="/_next/static/chunks/3678-3a61baba48e128b1.js" async=""></script><script src="/_next/static/chunks/5304-e97c0f05e6b2f56f.js" async=""></script><script src="/_next/static/chunks/8577-6fbd13a2f2b0b226.js" async=""></script><script src="/_next/static/chunks/3438-fdacdbdbec440226.js" async=""></script><script src="/_next/static/chunks/app/%5Busername%5D/page-734d43e0f57957f4.js" async=""></script><link rel="preload" href="https://unpkg.com/cursor-effects@latest/dist/browser.js" as="script"><link rel="preload" href="https://assets.guns.lol/_pow.js" as="script"><link rel="preload" href="https://challenges.cloudflare.com/turnstile/v0/api.js" as="script"><link href="https://assets.guns.lol/guns-solid.svg" rel="shortcut icon"><meta name="theme-color" content="#FFFFFF"><title>@BingCube</title><meta name="description" content="Hi, i love coding"><meta name="author" content="@BingCube | guns.lol"><meta property="og:title" content="@BingCube | guns.lol"><meta property="og:description" content="Hi, i love coding"><meta property="og:image" content="https://og.guns.lol/api/og?username=bingcube&amp;t=1726740317994"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="@BingCube | guns.lol"><meta name="twitter:description" content="Hi, i love coding"><meta name="twitter:image" content="https://og.guns.lol/api/og?username=bingcube&amp;t=1726740317994"><link href="https://api.fontshare.com/v2/css?f[]=satoshi@1&amp;f[]=array@400&amp;display=swap" rel="stylesheet"><script src="/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js" nomodule=""></script><script id="_cursor" src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script><script id="_codescript" src="https://assets.guns.lol/_pow.js"></script><script id="_code">
+                            p = new _injPow("adde763fe2c60f41d24ceac7b7c3dc17ce4f1fe328f2bc6e8519a461e3a", "5", "74c23460d3efa5f724edcdf24ab826732cf43deb19e84ac7bd87474956a0c2e2", !1)
+                            p.solvepow().then((async (o) => {
+                                if (o != null) {
+                                    await getResult(o.solution);
+                                }
+                            }))
+                        </script><link rel="stylesheet" data-font="satoshi" href=""><style data-font="satoshi">
+            body, * {
+                font-family: 'Satoshi', sans-serif !important;
             }
-        });
-    </script></body></html>
+        </style><style id="monica-reading-highlight-style">
+        .monica-reading-highlight {
+          animation: fadeInOut 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInOut {
+          0%, 100% { background-color: transparent; }
+          30%, 70% { background-color: rgba(2, 118, 255, 0.20); }
+        }
+      </style></head><body monica-version="6.2.4" monica-id="ofpnmcalabcbjgholdjcjblkibolbppb"><div class="userPage_backgroundImage__11BmZ" style="background-image:url(https://r2.guns.lol/679d4dbe-c100-4af0-bcbe-3c11411bc734.png)"></div><script>(self.__next_s=self.__next_s||[]).push(["https://unpkg.com/cursor-effects@latest/dist/browser.js",{"id":"_cursor"}])</script><style>
+                ::-moz-selection {
+                    background: #FFFFFF;
+                    color: #080808;
+                }
+                ::selection {
+                    background: #FFFFFF;
+                    color: #080808;
+                }
+                </style><div class="userPage_backgroundColor__NOc2o" style="background-color:#080808"></div><div style="--presenceUsernameColor:#FFFFFF;--presenceStatusColor:rgba(255, 255, 255, 0.7);--presenceContainerBackground:rgba(255, 255, 255, 0.07);--presenceContainerBorder:2px solid rgba(255, 255, 255, 0.05);--discordServerMembers:rgba(255, 255, 255, 0.6);--secondTabBackground:rgba(255, 255, 255, 0.07);--secondTabBorder:2px solid rgba(255, 255, 255, 0.05);--discordMissingIcon:rgba(255, 255, 255, 0.25);--modernLayoutSeperator:rgba(255, 255, 255, 0.12);--modernLayoutSeperatorBorder:rgba(255, 255, 255, 0.12);--discordAvatarBorder:2px solid rgba(27, 27, 27, 0.15);--badgeContainerBackground:rgba(255, 255, 255, 0.08);--badgeContainerBorder:2px solid rgba(255, 255, 255, 0.04);--userBadge:20.5px;--textColor:#FFFFFF;--iconColor:#FFFFFF;--backgroundColor:#080808;--joinStatus:rgba(255, 255, 255, 0.65);--audioPlayerBar:rgba(255, 255, 255, 0.35);--avatarBorder:2px solid rgba(27, 27, 27, 0.4);--containerColor:rgba(27, 27, 27, 0.34);--containerBlur:30px;--containerRadius:20px;--containerWidth:38rem;--containerPadding:35px 15px;--volumeBackgroundcolor:rgba(27, 27, 27, 0.34);--volumeBorder:2px solid rgba(27, 27, 27, 0.30600000000000005);--colorUsernameGlow:0px 0px 16.5px #FFFFFF;--buttonBackground:rgba(255, 255, 255, 0.22);--buttonBorder:2px solid rgba(255, 255, 255, 0.12);--buttonRadius:12px;--buttonAlign:center;--buttonBackgroundHover:rgba(255, 255, 255, 0.32);--buttonBorderHover:2px solid rgba(255, 255, 255, 0.25);--buttonUrlColor:rgba(255, 255, 255, 0.65)"><div class="userPage_mainContainer__D9vBk"><div class="userPage_userContainerWrapper__OVz6p"><div class="userPage_userContainer__eymIK userPage_fadeUpStart__fjpAo userPage_fadeUp__ulAPo"><div class="userLayout1_userInformation__GMpFu"><div class="userPage_avatarWrapper__vWt9O"><img src="https://r2.guns.lol/7e930dd9-81e3-453a-815e-5839be5c6749.png" alt="" class="userLayout1_avatar__qnP1r false"></div><div class="userLayout1_userDescription__ZjN4w false"><h1 class="userLayout1_userDescriptionUsername__ynCxB false" style="font-weight:600;font-size:39.5px">BingCube</h1><h3 class="userLayout1_userDescriptionText__grrjO" style="font-weight:570;font-size:19px">Hi, i love coding</h3></div><div class="userLayout1_socialsWrapper__9yWdO false"><div class="userPage_userSocials__J9Lve"><div class="userPage_userSocial__pqgln userPage_discord__HqXif"><style>
+                                    .userPage_discord__HqXif svg {
+                                        color: #FFFFFF!important;
+                                        filter: drop-shadow(#FFFFFF 1px 0 7px)!important;
+                                    }</style><a target="_blank" href="https://discord.com/invite/4c6yySTznP"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="1.96 4.26 20.03 15.53"><path fill="currentColor" d="M14.82 4.26a10.14 10.14 0 0 0-.53 1.1a14.66 14.66 0 0 0-4.58 0a10.14 10.14 0 0 0-.53-1.1a16 16 0 0 0-4.13 1.3a17.33 17.33 0 0 0-3 11.59a16.6 16.6 0 0 0 5.07 2.59A12.89 12.89 0 0 0 8.23 18a9.65 9.65 0 0 1-1.71-.83a3.39 3.39 0 0 0 .42-.33a11.66 11.66 0 0 0 10.12 0q.21.18.42.33a10.84 10.84 0 0 1-1.71.84a12.41 12.41 0 0 0 1.08 1.78a16.44 16.44 0 0 0 5.06-2.59a17.22 17.22 0 0 0-3-11.59a16.09 16.09 0 0 0-4.09-1.35zM8.68 14.81a1.94 1.94 0 0 1-1.8-2a1.93 1.93 0 0 1 1.8-2a1.93 1.93 0 0 1 1.8 2a1.93 1.93 0 0 1-1.8 2zm6.64 0a1.94 1.94 0 0 1-1.8-2a1.93 1.93 0 0 1 1.8-2a1.92 1.92 0 0 1 1.8 2a1.92 1.92 0 0 1-1.8 2z"></path></svg></a></div></div></div></div><script>(self.__next_s=self.__next_s||[]).push(["https://assets.guns.lol/_pow.js",{"id":"_codescript"}])</script><script>(self.__next_s=self.__next_s||[]).push([0,{"children":"\n                            p = new _injPow(\"adde763fe2c60f41d24ceac7b7c3dc17ce4f1fe328f2bc6e8519a461e3a\", \"5\", \"74c23460d3efa5f724edcdf24ab826732cf43deb19e84ac7bd87474956a0c2e2\", !1)\n                            p.solvepow().then((async (o) => {\n                                if (o != null) {\n                                    await getResult(o.solution);\n                                }\n                            }))\n                        ","id":"_code"}])</script><div class="cf-turnstile" data-sitekey="0x4AAAAAAAgU7T2niLQD-TLm" data-callback="getToken"><div><input type="hidden" name="cf-turnstile-response" id="cf-chl-widget-no4wo_response" value="0.o6yAiMJK0A2kVZj1RbWx54MY08PC0Pk8-AitFFum5tuKyM9yRpOwKxYOCP6Qw__2-3C2NIhXvj2leaiR_q6ye8Ix3vVAj40cJ4Fc4OvzIVKkcjj85ogGSayrG2QYp5YUOAwi3_m597yoWw5I0Z6QwvC7RVh7OUhXru5WCUeh3XMTO7B0c3569cW_BpPSJnfBUaLyL1NWv2TKeWDJBhqogeJbU3D4HF3QU3-btjOQC8axpEcdHIyf-EotwCiskAabZuIQi9dpJHdh2YWEGH_AP0YU8oeMIL9OpqCdV9qhYhwf1dzMtdT9gYk22_Y0XLymROFhspiPBk1fuNDq7P3ix59aaIWoa_AMcRRJssCxbF7nLIMK-YuqZIAzF3VkWdTqI9fBE9qC_ytQrxKJxME5oVpxAlGBg1By0IAPyd8PuNyVVnh6rucfbSpuI1DmMcPFidKSBHFZtaCHpJd6_ota7QInTj1COgC2WCS-uE6Lx3i0wnmU4g2p1vFAvlbDgEtH31A-fMV8MIfsQ0zll5ZhHddMBMC6QZpYjLAdk0JNCMUcqPJVMmuBBr-TtT5noxkYb2Btqyjne1Q6fqxbm8QiVzEC-rRNPnN3P9PSsZYJMW0MyDuvD94krkheiygRf20hDuJvMfMdjR3OhLG2G50XaaRlkPanaY4Kv-XOX-8LnQ80OvFhTSqKfVGN8MYJZpZEB5N5KuKpMvqnH49se7SDJx5GqfD2mNNrZsk-nZOiPLo.11eoq31If-Q1o71CEzz5cg.07a1e7697e3bdc7184866d7a27d8c42ca6935c20f1d81e39efd04e6e1b6afc43"></div></div><div class="userPage_profileViews__2Hqh_ false" style="bottom:12px;left:15px"><span style="font-weight:550;font-size:14.5px"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 9a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5a5 5 0 0 1 5-5a5 5 0 0 1 5 5a5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"></path></svg> <!-- -->0</span></div></div></div></div></div><script src="/_next/static/chunks/webpack-cbd96ddd45265a35.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0]);self.__next_f.push([2,null])</script><script>self.__next_f.push([1,"1:HL[\"/_next/static/css/8358f047b2b67bd7.css\",\"style\"]\n2:HL[\"/_next/static/css/5195dfab955c8f60.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"3:I[95751,[],\"\"]\n6:I[39275,[],\"\"]\n8:I[61343,[],\"\"]\n9:I[231,[\"231\",\"static/chunks/231-2e4f92705edd89a9.js\",\"9160\",\"static/chunks/app/not-found-d2a0863593ea9c67.js\"],\"\"]\nb:I[76130,[],\"\"]\n7:[\"username\",\"bingcube\",\"d\"]\nc:[]\n"])</script><script>self.__next_f.push([1,"0:[\"$\",\"$L3\",null,{\"buildId\":\"37kqvvzfInU3yPiIGT3v9\",\"assetPrefix\":\"\",\"urlParts\":[\"\",\"bingcube\"],\"initialTree\":[\"\",{\"children\":[[\"username\",\"bingcube\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]},\"$undefined\",\"$undefined\",true],\"initialSeedData\":[\"\",{\"children\":[[\"username\",\"bingcube\",\"d\"],{\"children\":[\"__PAGE__\",{},[[\"$L4\",\"$L5\",[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/5195dfab955c8f60.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]]],null],null]},[null,[\"$\",\"$L6\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"$7\",\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L8\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\"}]],null]},[[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/8358f047b2b67bd7.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"href\":\"https://api.fontshare.com/v2/css?f[]=satoshi@1\u0026f[]=array@400\u0026display=swap\",\"rel\":\"stylesheet\"}],[\"$\",\"link\",null,{\"href\":\"https://assets.guns.lol/guns-solid.svg\",\"rel\":\"shortcut icon\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L6\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L8\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[\"$\",\"div\",null,{\"className\":\"generalPages_containerWrapper__UJv9J\",\"children\":[\"$\",\"div\",null,{\"className\":\"generalPages_container__Hpj_A\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":\"1em\",\"height\":\"1em\",\"viewBox\":\"0 0 24 24\",\"children\":[\"$\",\"path\",null,{\"fill\":\"currentColor\",\"d\":\"M13 2v14.5h-2V2zm-2 17h2.004v2.004H11z\"}]}],[\"$\",\"h1\",null,{\"children\":\"We couldnt find this page.\"}],[\"$\",\"h3\",null,{\"children\":\"The page you are looking for doesn't exist.\"}],[\"$\",\"div\",null,{\"className\":\"generalPages_containerButtons__Q_FHb\",\"children\":[\"$\",\"$L9\",null,{\"href\":\"/\",\"children\":\"Go Home\"}]}]]}]}],\"notFoundStyles\":[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/5195dfab955c8f60.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]]}]}]]}]],null],null],\"couldBeIntercepted\":false,\"initialHead\":[null,\"$La\"],\"globalErrorComponent\":\"$b\",\"missingSlots\":\"$Wc\"}]\n"])</script><script>self.__next_f.push([1,"d:I[83438,[\"231\",\"static/chunks/231-2e4f92705edd89a9.js\",\"7963\",\"static/chunks/7963-ab1516be429d5fce.js\",\"6882\",\"static/chunks/6882-00ed709e5a044872.js\",\"3810\",\"static/chunks/3810-79d5b5f2b09d1382.js\",\"1531\",\"static/chunks/1531-aa33b0abb1342068.js\",\"3371\",\"static/chunks/3371-45cd79df0c3ccbfb.js\",\"8287\",\"static/chunks/8287-6bb4e1b8ebc57bec.js\",\"3678\",\"static/chunks/3678-3a61baba48e128b1.js\",\"5304\",\"static/chunks/5304-e97c0f05e6b2f56f.js\",\"8577\",\"static/chunks/8577-6fbd13a2f2b0b226.js\",\"3438\",\"static/chunks/3438-fdacdbdbec440226.js\",\"4712\",\"static/chunks/app/%5Busername%5D/page-734d43e0f57957f4.js\"],\"default\"]\n5:[\"$\",\"$Ld\",null,{\"data\":{\"username\":\"bingcube\",\"account_created\":1726582932,\"verified\":true,\"alias\":\"\",\"config\":{\"description\":\"Hi, i love coding\",\"color\":\"#1b1b1b\",\"text_color\":\"#FFFFFF\",\"bg_color\":\"#080808\",\"icon_color\":\"#FFFFFF\",\"gradient_1\":\"#881c9c\",\"gradient_2\":\"#0d0d0d\",\"profile_gradient\":false,\"presence\":\"\",\"audio\":\"\",\"avatar\":\"https://r2.guns.lol/7e930dd9-81e3-453a-815e-5839be5c6749.png\",\"custom_cursor\":\"\",\"url\":\"https://r2.guns.lol/679d4dbe-c100-4af0-bcbe-3c11411bc734.png\",\"animated_title\":false,\"monochrome\":true,\"volume_control\":false,\"use_discord_avatar\":false,\"swap_colors\":false,\"social_glow\":true,\"badge_glow\":true,\"display_name\":\"BingCube\",\"background_effects\":\"none\",\"username_effects\":\"none\",\"username_glow\":true,\"blur\":30,\"opacity\":0.34,\"page_views\":0,\"user_badges\":[],\"custom_badges\":[],\"socials\":[{\"social\":\"discord\",\"value\":\"https://discord.com/invite/4c6yySTznP\",\"id\":\"ba3325c8-7b41-4701-8340-3fc7976b2dfa\",\"icon\":\"\"}],\"premium\":{\"effects_color\":\"#ffffff\",\"badge_color\":\"#ffffff\",\"border_color\":\"#ffffff\",\"typewriter_enabled\":false,\"typewriter\":[],\"hide_views\":false,\"border_enabled\":false,\"second_tab_enabled\":false,\"monochrome_badges\":false,\"animation\":\"fade\",\"hide_join_date\":false,\"border_width\":2,\"border_radius\":20,\"second_tab\":{},\"cursor_effects\":\"\",\"font\":\"satoshi\",\"page_enter_text\":\"\",\"layout\":\"default\",\"banner\":\"\",\"buttons\":[],\"show_url\":false,\"text_align\":\"center\",\"button_shadow\":false,\""])</script><script>self.__next_f.push([1,"button_border_radius\":12}},\"premium\":false,\"uid\":212136,\"_C\":\"74c23460d3efa5f724edcdf24ab826732cf43deb19e84ac7bd87474956a0c2e2\",\"_PS\":\"adde763fe2c60f41d24ceac7b7c3dc17ce4f1fe328f2bc6e8519a461e3a\",\"_ts\":1726740317,\"success\":true,\"presence\":{}}}]\n"])</script><script>self.__next_f.push([1,"a:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"name\":\"theme-color\",\"content\":\"#FFFFFF\"}],[\"$\",\"meta\",\"2\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"3\",{\"children\":\"@BingCube\"}],[\"$\",\"meta\",\"4\",{\"name\":\"description\",\"content\":\"Hi, i love coding\"}],[\"$\",\"meta\",\"5\",{\"name\":\"author\",\"content\":\"@BingCube | guns.lol\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:title\",\"content\":\"@BingCube | guns.lol\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:description\",\"content\":\"Hi, i love coding\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:image\",\"content\":\"https://og.guns.lol/api/og?username=bingcube\u0026t=1726740317994\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"10\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"11\",{\"name\":\"twitter:title\",\"content\":\"@BingCube | guns.lol\"}],[\"$\",\"meta\",\"12\",{\"name\":\"twitter:description\",\"content\":\"Hi, i love coding\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:image\",\"content\":\"https://og.guns.lol/api/og?username=bingcube\u0026t=1726740317994\"}]]\n4:null\n"])</script><script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;8c58c1a9de010ebd&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true}},&quot;version&quot;:&quot;2024.8.0&quot;,&quot;token&quot;:&quot;2fe24d772b4146c9a06db032d45156c9&quot;}" crossorigin="anonymous"></script>
+<div><div dir="ltr"><div><div class="mantine-Modal-root mantine-yxmaw9"></div></div></div></div><script src="https://challenges.cloudflare.com/turnstile/v0/api.js" id="_turnstile" data-nscript="afterInteractive"></script><next-route-announcer style="position: absolute;"></next-route-announcer><div id="monica-content-root" class="monica-widget"></div></body></html>
